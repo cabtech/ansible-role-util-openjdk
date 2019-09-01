@@ -1,0 +1,10 @@
+---
+- name: 'openjdk {{openjdk_version}} = {{openjdk_state}}'
+  apt:
+    name: openjdk-{{openjdk_version}}-jre
+    state: '{{openjdk_state}}'
+  become: true
+  tags:
+  - openjdk
+  - openjdk-pkg
+...

@@ -1,0 +1,4 @@
+---
+openjdk_state: present
+openjdk_version: 8
+...
