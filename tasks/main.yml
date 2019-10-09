@@ -5,6 +5,6 @@
     state: '{{openjdk_state}}'
   become: true
   tags:
-  - openjdk
-  - openjdk-pkg
+  - ct-openjdk
+  - ct-openjdk-pkg
 ...
