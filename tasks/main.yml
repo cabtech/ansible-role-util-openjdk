@@ -1,5 +1,5 @@
 ---
-- name: 'openjdk-{{openjdk_jdk_or_jre} v{{openjdk_version}} --> {{openjdk_state}}'
+- name: 'openjdk-{{openjdk_jdk_or_jre}} v{{openjdk_version}} --> {{openjdk_state}}'
   apt:
     name: openjdk-{{openjdk_version|int}}-{{openjdk_jdk_or_jre}}
     state: '{{openjdk_state}}'
