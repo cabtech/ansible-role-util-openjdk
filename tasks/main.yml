@@ -1,10 +1,9 @@
 ---
-- name: 'openjdk {{openjdk_version}} = {{openjdk_state}}'
+- name: 'openjdk-{{openjdk_jdk_or_jre} v{{openjdk_version}} --> {{openjdk_state}}'
   apt:
-    name: openjdk-{{openjdk_version}}-jre
+    name: openjdk-{{openjdk_version|int}}-{{openjdk_jdk_or_jre}}
     state: '{{openjdk_state}}'
   become: true
   tags:
   - ct-openjdk
-  - ct-openjdk-pkg
 ...
