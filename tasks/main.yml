@@ -1,8 +1,8 @@
 ---
-- name: 'openjdk-{{openjdk_jdk_or_jre}} v{{openjdk_version}} --> {{openjdk_state}}'
-  apt:
-    name: openjdk-{{openjdk_version|int}}-{{openjdk_jdk_or_jre}}
-    state: '{{openjdk_state}}'
+- name: 'Set OpenJDK package state: {{ "openjdk-%s v%s --> %s" % (openjdk_jdk_or_jre, openjdk_version, openjdk_state) }}'
+  ansible.builtin.apt:
+    name: openjdk-{{ openjdk_version | int }}-{{ openjdk_jdk_or_jre }}
+    state: '{{ openjdk_state }}'
   become: true
   tags:
   - ct-openjdk
